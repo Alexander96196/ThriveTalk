@@ -1,0 +1,102 @@
+.services__list {
+    grid-template-columns: repeat(1, 1fr);
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.006em;
+    color: #ffffff;
+    @include list-reset;
+    margin-bottom: 60px;
+}
+
+.services__item {
+    padding: 52px 50px 189px 78px;
+    position: relative;
+
+    &--physic {
+        background: #22356f;
+    }
+
+    &--mental {
+        background: #0052c1;
+    }
+
+    &--nutrition {
+        background-image: url("../../img/nutrition.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--gym {
+        background: #62d0df;
+    }
+
+    &--cross {
+        background: #dee1ff;
+    }
+
+    &--aerob {
+        background: #8f00ff;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 2px;
+        top: 37px;
+        left: 55px;
+        background-color: #ffffff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 64px;
+        left: 55px;
+        border-radius: 50%;
+        background-color: #e9b730;
+    }
+}
+
+@media (min-width: 760px) {
+    .services__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .services__wrapper {
+        padding-right: calc(50% - 585px);
+        padding-left: calc(50% - 585px);
+        margin: 0 -55px;
+    }
+
+    .services__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 77px;
+    }
+
+    .services__item {
+        padding: 95px 50px 211px 78px;
+
+        &::before {
+            content: "";
+            width: 220px;
+            height: 2px;
+            top: 65px;
+        }
+
+        &::after {
+            content: "";
+            width: 9px;
+            height: 9px;
+            top: 105px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.header__nav {
+    margin: 0 -30px;
+}
+
+.header__wrapper {
+    position: relative;
+    padding: 20px 30px;
+    background: #f4f9e2;
+}
+
+.header__block {
+    display: none;
+}
+
+.header__nav-list {
+    @include list-reset;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #22356f;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.header__nav-item {
+    width: 100%;
+    padding: 21px 75px;
+    border-bottom: 1px solid rgba(98, 208, 223, 0.3);
+}
+
+@media (min-width: 1280px) {
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        padding-right: calc(50% - 585px);
+        padding-left: calc(50% - 585px);
+    }
+
+    .header__logo {
+        margin-right: 300px;
+    }
+
+    .header__inner {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .header__block {
+        display: block;
+        z-index: 1;
+    }
+
+    .header__nav {
+        display: flex;
+        margin: 0 383px 0 0;
+    }
+
+    .header__nav-list {
+        display: flex;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .header__nav-item {
+        border: none;
+        padding: 0;
+
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
+    }
+
+    .header__nav-link {
+        position: relative;
+        border: none;
+        padding: 0;
+        white-space: nowrap;
+
+        &:active {
+            color: #62d0df;
+            background-color: transparent;
+        }
+
+        &:hover {
+            color: #62d0df;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 17px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #62d0df;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    .header__button {
+        &:active {
+            background-color: #3bc2d4;
+        }
+    }
+}

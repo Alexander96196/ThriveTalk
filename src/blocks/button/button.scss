@@ -1,0 +1,22 @@
+.button {
+    position: relative;
+    display: block;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 20px 30px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #ffffff;
+    background: #62D0DF;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

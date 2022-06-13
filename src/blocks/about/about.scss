@@ -1,0 +1,145 @@
+.about__content {
+    color: #22356f;
+    padding: 30px 30px;
+}
+
+.about__title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about__text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+}
+
+.about__list-title {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: rgba(34, 53, 111, 0.5);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -0.006em;
+    color: #ffffff;
+    @include list-reset;
+    margin-bottom: 60px;
+}
+
+.about__item {
+    padding: 52px 50px 189px 78px;
+    position: relative;
+
+    &--pink {
+        background: #ffe2de;
+    }
+
+    &--green {
+        background: #c4e769;
+    }
+
+    &--blue {
+        background: #62d0df;
+    }
+
+    &--dark-blue {
+        background: #0052c1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 2px;
+        top: 37px;
+        left: 55px;
+        background-color: #ffffff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 64px;
+        left: 55px;
+        border-radius: 50%;
+        background-color: #e9b730;
+    }
+}
+
+@media (min-width: 760px) {
+    .about__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .about__wrapper {
+        padding-right: calc(50% - 585px);
+        padding-left: calc(50% - 585px);
+        margin: 0 -55px;
+    }
+
+    .about__content {
+        display: flex;
+        padding: 150px 55px 76px 55px;
+    }
+
+    .about__title {
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        margin-right: 225px;
+        margin-bottom: 0;
+    }
+
+    .about__text {
+        width: 592px;
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .about__list-title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 24px;
+    }
+
+    .about__list {
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 120px;
+    }
+
+    .about__item {
+        padding: 95px 50px 211px 78px;
+        position: relative;
+
+        &::before {
+            content: "";
+            top: 65px;
+            left: 55px;
+        }
+
+        &::after {
+            content: "";
+            width: 9px;
+            height: 9px;
+            top: 105px;
+        }
+    }
+}

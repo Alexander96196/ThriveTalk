@@ -1,0 +1,8 @@
+@font-face {
+  @include includeFont(400, $first-font, "Larsseit");
+}
+
+@font-face {
+  @include includeFont(700, $second-font, "Larsseit-bold");
+}
+
